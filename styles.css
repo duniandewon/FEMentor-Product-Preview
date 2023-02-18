@@ -1,0 +1,155 @@
+:root {
+  --main-color: hsl(158, 36%, 37%);
+  --main-color-dark: hsl(158, 36%, 17%);
+  --secondary-color: hsl(30, 38%, 92%);
+
+  --main-text-color: hsl(228, 12%, 48%);
+  --dark-text-color: hsl(212, 21%, 14%);
+  --white-color: hsl(0, 0%, 100%);
+
+  --main-font: "Montserrat", sans-serif;
+  --secondary-font: "Fraunces", serif;
+
+  --font-weight-regular: 500;
+  --font-weight-bold: 700;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+body {
+  background-color: var(--secondary-color);
+  color: var(--main-text-color);
+  font-family: var(--main-font);
+  font-weight: var(--font-weight-regular);
+  font-size: 14px;
+
+  display: grid;
+  place-items: center;
+  margin: 1rem;
+}
+
+.card {
+  background-color: var(--white-color);
+  border-radius: 0.5rem;
+  max-width: 690px;
+  overflow: hidden;
+}
+
+.card__body {
+  padding: 2.2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.card__subtitle {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+
+.card__price,
+.card__title {
+  font-family: var(--secondary-font);
+  font-size: 2.5rem;
+}
+
+.card__title {
+  color: var(--dark-text-color);
+}
+
+.card__prices {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card__price {
+  color: var(--main-color);
+}
+
+.card__original-price {
+  text-decoration: line-through;
+}
+
+.btn {
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+
+  background-color: var(--main-color);
+  color: var(--white-color);
+  font-weight: var(--font-weight-bold);
+
+  border: 0;
+  text-decoration: none;
+
+  border-radius: 0.5rem;
+  padding: 0.285rem 0;
+}
+
+.btn:is(:hover, :focus) {
+  background-color: var(--main-color-dark);
+}
+
+@media (min-width: 690px) {
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card__body {
+    gap: 0.285rem;
+  }
+}
